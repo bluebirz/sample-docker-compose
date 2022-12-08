@@ -1,0 +1,16 @@
+version: '3'
+services:
+  debian:
+    container_name: debian1
+    build: .
+    stdin_open: true
+    tty: true
+    depends_on:
+      debian2:
+        condition: service_started
+
+  debian2:
+    container_name: debian2
+    image: debian:latest
+    stdin_open: true
+    tty: true

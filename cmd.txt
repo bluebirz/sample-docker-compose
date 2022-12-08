@@ -1,0 +1,6 @@
+# up
+docker-compose up -d
+# down
+docker-compose down
+# down and delete all resources
+docker-compose down --volumes --rmi all
